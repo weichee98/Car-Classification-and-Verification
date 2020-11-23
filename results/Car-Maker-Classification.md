@@ -25,7 +25,7 @@ The final accuracy obtained is 0.628 which is lower than the one published (0.82
 
 ### Inception V3 replacing Googlenet
 
-Inception V3 has better performance in the computer vision field compared to GoogLeNet, here we replace Googlenet with Inception V3 and compare their performances on car maker classification.
+Inception V3 has better performance in the computer vision field compared to GoogLeNet. Here, we replace Googlenet with Inception V3 and compare their performances on car maker classification.
 
 | Model | Layers |
 |-|-|
@@ -55,7 +55,7 @@ We can observe that Inception V3 performs significantly better than GoogLeNet  i
 
 Comparing Inception V3 (1) with Inception V3 (2), the dropout layer does not help in improving test accuracy but it results in a lower test loss. Introducing a hidden layer of 1000 neurons in Inception V3 (3) improves the accuracy and lowers the loss as compared to Inception V3 (2). When 2 hidden layers of 1000 neurons are added in Inception V3 (4), the accuracies and losses become worse, which might be due to overfitting.
 
-### Conclusion
+## Conclusion
 
-As the model becomes deeper, the classification performance might be improved, but will also introduce more complexity to the model, results in overfitting. Therefore, regularizers and dropout layers can play significant role in helping the generalization of complex model, leading to better performance of deeper neural networks.
+As the model becomes deeper, the classification performance might be improved, but at the same time will also introduce more complexity to the model, causing the model to overfit easily. Therefore, regularizers and dropout layers can play significant role in helping the generalization of complex model, leading to better performance of deeper neural networks.
 
