@@ -2,17 +2,37 @@
 
 Instead of classify the images according to their car makers, we can train a feature extraction model to extract embeddings for a particular image such that embeddings from images from similar car makers should be as close as possible and images from different car makers should be as far as possible. To verify if two images have the same car maker or not, a simple way is to test if the distance between embeddings are close enough.
 
+In this section, we use binary cross entropy loss and triplet loss to train a model for feature extraction. The model takes in the image as input and output an embedding with a size of 1000 for that image. The embedding represents the features extracted from the image. The embeddings will be L2 normalized so that all embeddings are projected onto the surface of a hypersphere at R1000 with a radius of 1 unit. This is to minimize the distance between embeddings and speed up the training. The architecture of the model is shown below:
+
+![](../image/feature_extraction_model.PNG)
+
+
 ## Dot Product Binary Cross Entropy Losses
 
+After the embeddings are L2 normalized, the embeddings will have a magnitude of 1. The dot product between 2 embeddings is equivalent to <img src="https://render.githubusercontent.com/render/math?math=\cos{(\theta)}"> where <img src="https://render.githubusercontent.com/render/math?math=\theta"> is the angle between the 2 embeddings. The smaller the angle, the larger the dot product. The goal is to make the angle as small as possible if the 2 images have similar car makers and to make the angle as large as possible if the 2 images have different car makers.
 
+The dot product has a range from -1 to 1. We can convert the dot product into the range of 0 to 1 using sigmoid function, this gives the probability of similarity between the 2 images. Therefore, the problem is now reduced to a binary classification problem to test whether a pair of images has the same car maker (1) or has different car maker (0). Binary Cross Entropy can be used as the loss to train image embeddings now.
 
+![](../image/dot_loss_epoch.png)
+
+At the first stage (before epoch 150), we train the model using unbalanced dataset so that the model is able to learn the embeddings for the majority class first. Then we further train the model using balanced dataset up to epoch 175. Finally, we train alternatively using unbalanced and balanced dataset until the model can have a more stable performance for both kind the datasets.
+
+The resulting model is used for car verification purpose. During testing, we choose 8 images from 5 classes, then from each class, we choose 1 random image as the query image and find out the top 7 images with the closest embedding to the query image. The result is shown below where each row indicates query image and top-7 retrievals for this query image.
+
+|These 5 classes are the classes with the least number of images.|
+|-|
+|![](../image/dot_verification_least.png)|
+
+|These 5 classes are the classes with the most number of images.|
+|-|
+|![](../image/dot_verification_most.png)|
+
+|These 5 classes are random classes.|
+|-|
+|![](../image/dot_verification_random.png)|
 
 
 ## Triplet Loss
-
-In this section, we use triplet loss to train a model for feature extraction. The model takes in the image as input and output an embedding with a size of 1000 for that image. The embedding represents the features extracted from the image. The embeddings will be L2 normalized so that all embeddings are projected onto the surface of a hypersphere at R1000 with a radius of 1 unit. This is to minimize the distance between embeddings and speed up the training. The architecture of the model is shown below:
-
-![](../image/feature_extraction_model.PNG)
 
 The goal of triplet loss is to train the embedding such that cars with the same car maker will be projected as close as possible in the embedding space, whereas cars with different car maker will be projected as far as possible in the embedding space. The value of margin (<img src="https://render.githubusercontent.com/render/math?math=\alpha">) use for training is 0.5.
 
@@ -71,13 +91,13 @@ The problem with resampled dataset to yield balanced batches is that some images
 | ![](../image/semihard_unbalanced_epoch.png) | ![](../image/semihard_unbalanced_test_epoch.png) |
 |-|-|
 
-Finally, the resulting model is used for car verification purpose. During testing, we choose 8 images from 5 classes, then from each class, we choose 1 random image as the query image and find out the top 7 images with the closest embedding to the query image. The result is shown below where each row indicates query image and top-7 retrievals for this query image. <
+Finally, the resulting model is used for car verification purpose. During testing, we choose 8 images from 5 classes, then from each class, we choose 1 random image as the query image and find out the top 7 images with the closest embedding to the query image. The result is shown below where each row indicates query image and top-7 retrievals for this query image.
 
-|These 5 classes are the classes with the least number images.|
+|These 5 classes are the classes with the least number of images.|
 |-|
 |![](../image/triplet_semihard_verification_least.png)|
 
-|These 5 classes are the classes with the most number images.|
+|These 5 classes are the classes with the most number of images.|
 |-|
 |![](../image/triplet_semihard_verification_most.png)|
 
