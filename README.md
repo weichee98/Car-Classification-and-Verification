@@ -16,6 +16,12 @@ The dataset includes 4 unique features which are car hierarchy, car attributes, 
 ![uncertain](image/uncertain.png)
 
 
+## Exisiting Work
+
+Previous car model research papers emphasize only on the car model classification such as [using wireframe models to fit a car](http://www.nlpr.ia.ac.cn/2012papers/gjkw/gk14.pdf) and [constructing 3D space curves to match 2D image curves](http://www.cs.cmu.edu/~ehsiao/ehsiao_wacv14.pdf). However, most of the works are only restricted to a small number of car models. 
+
+The [latest paper](https://arxiv.org/pdf/1506.08959.pdf) related to car model classification uses convolutional neural networks (CNN) which has been gaining success in many computer vision topics to classify the car into 431 models and 75 makers. The paper also tried to explore the unprecedented attribute prediction using the [Overfeat model](https://arxiv.org/pdf/1312.6229.pdf). The researchers only used 30955 images for training and testing of classification tasks from [CompCars dataset](http://mmlab.ie.cuhk.edu.hk/datasets/comp_cars/index.html), which is only approximately a quarter of the images from the same source.
+
 ## Getting Started
 
 ### Dataset Download
@@ -322,4 +328,10 @@ $ python model_train.py -d data/train.csv -v data/valid.csv -i data/image/ \
 3. [Car Verification](results/Car-Verification.md)
 
 
+## Future Work
 
+We realised that all the models in the published papers which use CompCars datasets are limited to the web-nature datasets which might possess some drawbacks when the model is to be used on the modern transportation system mentioned in Introduction. Surveillance-nature dataset is more suitable to be used if the models developed are to be implemented in sophisticated transportation and road systems.
+
+In contrast, the opposite is also true, the models trained using surveillance-nature dataset will not perform well for tasks like image ranking and users' interest predictions. 
+More advanced and state-of-art transformer architecture neural networks like ViT-H/14 can be used to achieve higher accuracy. The use of [transformer architecture neural networks](https://arxiv.org/pdf/2010.11929.pdf) has gained a lot of success in NLP and researchers are working on using similar neural networks in image classification. 
+Besides, more advanced loss function like [quadruplet loss](https://arxiv.org/pdf/2002.11644.pdf) inspired from triplet loss can also be further explored.
