@@ -313,6 +313,13 @@ $ python model_train.py -d data/train.csv -v data/valid.csv -i data/image/ \
     -o SGD -s True -clr 1e-5
 ```
 
+## Results
+
+1. [Car Maker Classification](results/Car-Maker-Classification.md)
+
+2. [Car Model Classification](results/Car-Model-Classification.md)
+
+3. [Car Verification](results/Car-Verification.md)
 
 
 
