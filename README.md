@@ -319,6 +319,15 @@ $ python model_train.py -d data/train.csv -v data/valid.csv -i data/image/ \
     -o SGD -s True -clr 1e-5
 ```
 
+## Image Preprocessing
+
+The dataset is split into 3 subsets of Train:Test:Validation = 5:3:2. We used Tensorflow Dataset to load the images as it will carry out batch, shuffle, augmentation etc in an organized pipeline.
+
+The images are then scaled down by a factor of 255 to transform every pixel value [0, 255] to [0, 1] to ensure images contribute more evenly to the total loss. The images will be resized to the required dimension: 224x224x3 for GoogLeNet and 299x299x3 for Inception_V3. Images will be augmented eg: flipped laterally, cropped, adjusted contrast etc. increase the training data. The datasets will be shuffled and batched before feeding into the networks. The image below shows the sample of the augmented 6 images.
+
+![](image/augmented_images.png)
+
+
 ## Results
 
 1. [Car Maker Classification](results/Car-Maker-Classification.md)
