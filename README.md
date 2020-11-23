@@ -333,5 +333,6 @@ $ python model_train.py -d data/train.csv -v data/valid.csv -i data/image/ \
 We realised that all the models in the published papers which use CompCars datasets are limited to the web-nature datasets which might possess some drawbacks when the model is to be used on the modern transportation system mentioned in Introduction. Surveillance-nature dataset is more suitable to be used if the models developed are to be implemented in sophisticated transportation and road systems.
 
 In contrast, the opposite is also true, the models trained using surveillance-nature dataset will not perform well for tasks like image ranking and users' interest predictions. 
+
 More advanced and state-of-art transformer architecture neural networks like ViT-H/14 can be used to achieve higher accuracy. The use of [transformer architecture neural networks](https://arxiv.org/pdf/2010.11929.pdf) has gained a lot of success in NLP and researchers are working on using similar neural networks in image classification. 
 Besides, more advanced loss function like [quadruplet loss](https://arxiv.org/pdf/2002.11644.pdf) inspired from triplet loss can also be further explored.
