@@ -1,0 +1,76 @@
+{
+
+    "dot_inception_v3": {
+
+        "decsription": [
+            "-1 to 1",
+            "start imagenet",
+            "layer normalization after inception v3",
+            "1000 embeddings l2 normalization"
+        ],
+
+        "training": {
+            "dot_inception_v3_20201117200930": {
+                "optimizer": "SGD: not-balanced",
+                "saved_epoch": 23,
+                "train_loss": 1.241365,
+                "test_loss": 1.250276
+            },
+            "dot_inception_v3_20201118001103": {
+                "optimizer": "SGD: not-balanced",
+                "saved_epoch": 21,
+                "train_loss": 1.186275,
+                "test_loss": 1.202998
+            },
+            "dot_inception_v3_20201118041140": {
+                "optimizer": "SGD: not-balanced",
+                "saved_epoch": 25,
+                "train_loss": 1.133838,
+                "test_loss": 1.171053
+            },
+            "dot_inception_v3_20201118081118": {
+                "optimizer": "SGD: not-balanced",
+                "saved_epoch": 24,
+                "train_loss": 1.098414,
+                "test_loss": 1.137956
+            },
+            "dot_inception_v3_20201118121135": {
+                "optimizer": "SGD: not-balanced",
+                "saved_epoch": 24,
+                "train_loss": 0.911657,
+                "test_loss": 1.008729
+            },
+            "dot_inception_v3_20201118163240": {
+                "optimizer": "SGD: not-balanced",
+                "saved_epoch": 20,
+                "train_loss": 0.698883,
+                "test_loss": 0.849369
+            },
+            "dot_inception_v3_20201119095045": {
+                "optimizer": "SGD: not-balanced",
+                "saved_epoch": 16,
+                "train_loss": 0.692044,
+                "test_loss": 0.846038
+            },
+            "dot_inception_v3_20201119124807": {
+                "optimizer": "SGD: balanced",
+                "saved_epoch": 23,
+                "train_loss": 0.739924,
+                "test_loss": 0.846156
+            },
+            "dot_inception_v3_20201119164443": {
+                "optimizer": "SGD: not-balanced",
+                "saved_epoch": 14,
+                "train_loss": 0.685070,
+                "test_loss": 0.833172
+            },
+            "dot_inception_v3_20201119201511": {
+                "optimizer": "SGD: balanced",
+                "saved_epoch": 21,
+                "train_loss": 0.736626,
+                "test_loss": 0.836134
+            }
+        }
+    }
+
+}

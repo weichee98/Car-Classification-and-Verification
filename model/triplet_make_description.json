@@ -1,0 +1,117 @@
+{
+
+    "triplet_inception_v3_semihard": {
+
+        "decsription": [
+            "batch semihard",
+            "start imagenet",
+            "layer normalization after inception v3",
+            "1000 embeddings l2 normalization"
+        ],
+
+        "training": {
+            "triplet_inception_v3_semihard_20201114135759": {
+                "optimizer": "Adam: semihard, balanced",
+                "saved_epoch": 29,
+                "train_all": 0.204871,
+                "train_hard": 0.510123,
+                "train_semihard": 0.388653,
+                "test_all": 0.286472,
+                "test_hard": 0.644523,
+                "test_semihard": 0.425609
+            },
+            "triplet_inception_v3_semihard_20201115225910": {
+                "optimizer": "Adam: semihard on triplet_inception_v3_semihard_20201114135759, non-balanced",
+                "saved_epoch": 25,
+                "train_all": 0.289042,
+                "train_hard": 0.645508,
+                "train_semihard": 0.442904,
+                "test_all": 0.333517,
+                "test_hard": 0.774167,
+                "test_semihard": 0.473297
+            },
+            "triplet_inception_v3_semihard_20201116124655": {
+                "optimizer": "Adam: semihard on triplet_inception_v3_semihard_20201115225910, non-balanced",
+                "saved_epoch": 23,
+                "train_all": 0.241066,
+                "train_hard": 0.564323,
+                "train_semihard": 0.421987,
+                "test_all": 0.324299,
+                "test_hard": 0.744063,
+                "test_semihard": 0.460609
+            },
+            "triplet_inception_v3_semihard_20201116164722": {
+                "optimizer": "Adam: semihard on triplet_inception_v3_semihard_20201116124655, non-balanced",
+                "saved_epoch": 18,
+                "train_all": 0.220839,
+                "train_hard": 0.517075,
+                "train_semihard": 0.396745,
+                "test_all": 0.312288,
+                "test_hard": 0.738903,
+                "test_semihard": 0.454302
+            },
+            "triplet_inception_v3_semihard_20201116220904": {
+                "optimizer": "Adam: semihard on triplet_inception_v3_semihard_20201116164722, balanced",
+                "saved_epoch": 8,
+                "train_all": 0.199852,
+                "train_hard": 0.362867,
+                "train_semihard": 0.300349,
+                "test_all": 0.318177,
+                "test_hard": 0.610343,
+                "test_semihard": 0.406142
+            }
+            
+        }
+
+    },
+
+    "triplet_inception_v3_all": {
+
+        "decsription": [
+            "batch all",
+            "start imagenet",
+            "layer normalization after inception v3",
+            "1000 embeddings l2 normalization"
+        ],
+
+        "training": {
+            "triplet_inception_v3_all_20201114175002": {
+                "optimizer": "Adam",
+                "batch_size": 100,
+                "saved_epoch": 30,
+                "train_all": 0.247060,
+                "train_hard": 0.518768,
+                "train_semihard": 0.386052,
+                "test_all": 0.391235,
+                "test_hard": 1.006762,
+                "test_semihard": 0.465088
+            }
+        }
+
+    },
+
+    "triplet_inception_v3_hard": {
+
+        "decsription": [
+            "batch hard",
+            "start imagenet",
+            "layer normalization after inception v3",
+            "1000 embeddings l2 normalization"
+        ],
+
+        "training": {
+            "triplet_inception_v3_hard_20201114220242": {
+                "optimizer": "Adam",
+                "saved_epoch": 11,
+                "train_all": 0.488972,
+                "train_hard": 0.501896,
+                "train_semihard": 0.494480,
+                "test_all": 0.480766,
+                "test_hard": 0.501837,
+                "test_semihard": 0.487558
+            }
+        }
+
+    }
+
+}

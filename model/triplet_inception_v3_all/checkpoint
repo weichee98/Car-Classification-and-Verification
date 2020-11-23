@@ -1,0 +1,2 @@
+model_checkpoint_path: "triplet_inception_v3_all_20201114214038"
+all_model_checkpoint_paths: "triplet_inception_v3_all_20201114214038"

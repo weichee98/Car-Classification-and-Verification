@@ -1,0 +1,220 @@
+{
+    "googlenet": {
+
+        "description": [
+            "start with pretrained weights",
+            "trainable googlenet layer",
+            "dense layer without regularization", 
+            "trained on pre-splitted dataset"
+        ],
+        
+
+        "training": {
+            "googlenet_make_classifier_20201001232148": {
+                "optimizer": "Adam",
+                "learning_rate": 0.0001,
+                "batch_size": 100,
+                "saved_epoch": 20,
+                "test_accuracy": 0.6207991242408752
+            },
+            "googlenet_make_classifier_20201002091920": {
+                "optimizer": "Adam",
+                "learning_rate": 0.00001,
+                "batch_size": 100,
+                "saved_epoch": 4,
+                "test_accuracy": 0.637701153755188
+            }
+        }
+        
+    },
+
+    "inception_v3_make_classifier": {
+        
+        "description": [
+            "start with pretrained weights",
+            "trainable inception v3 layer",
+            "dense layer without regularization", 
+            "trained on pre-splitted dataset"
+        ],
+
+        "training": {
+            "inception_v3_make_classifier_20201001113558": {
+                "optimizer": "Adam",
+                "learning_rate": 0.0001,
+                "batch_size": 100,
+                "saved_epoch": 37,
+                "loss": 0.7024503946304321,
+                "test_accuracy": 0.8554839491844177
+            },
+            "inception_v3_make_classifier_20201002172533": {
+                "optimizer": "Adam",
+                "batch_size": 100,
+                "saved_epoch": 36,
+                "loss": 0.4428084194660187,
+                "test_accuracy": 0.9144811034202576
+            },
+            "inception_v3_make_classifier_20201003013537": {
+                "optimizer": "Adam",
+                "batch_size": 100,
+                "saved_epoch": 37,
+                "loss": 0.41883695125579834,
+                "test_accuracy": 0.9228214621543884
+            },
+            "inception_v3_make_classifier_20201007001143": {
+                "optimizer": "Adam",
+                "batch_size": 100,
+                "saved_epoch": 35,
+                "loss": 0.3603738844394684,
+                "test_accuracy": 0.9364020824432373
+            }
+        }
+
+    },
+
+    "inception_v3_make_classifier2": {
+
+        "description": [
+            "start with pretrained weights",
+            "trainable inception v3 layer",
+            "dense layer with regularization", 
+            "dropout 0.2",
+            "trained on pre-splitted dataset"
+        ],
+
+        "training": {
+
+            "inception_v3_make_classifier2_20201007165736.json": {
+                "optimizer": "Adam",
+                "batch_size": 100,
+                "saved_epoch": 39,
+                "loss": 0.6731646060943604,
+                "test_accuracy": 0.8685725331306458
+            },
+            "inception_v3_make_classifier2_20201007221208": {
+                "optimizer": "Adam",
+                "batch_size": 100,
+                "saved_epoch": 36,
+                "loss": 0.507867157459259,
+                "test_accuracy": 0.8925847411155701
+            },
+            "inception_v3_make_classifier2_20201008082231": {
+                "optimizer": "Adam",
+                "batch_size": 100,
+                "saved_epoch": 33,
+                "loss": 0.36085253953933716,
+                "test_accuracy": 0.919204831123352
+            },
+            "inception_v3_make_classifier2_20201008215844": {
+                "optimizer": "Adam",
+                "batch_size": 100,
+                "saved_epoch": 26,
+                "loss": 0.3340543806552887,
+                "test_accuracy": 0.9225261807441711
+            },
+            "inception_v3_make_classifier2_20201017215045": {
+                "optimizer": "Adam",
+                "batch_size": 100,
+                "saved_epoch": 32,
+                "loss": 0.32460618019104004,
+                "test_accuracy": 0.9250356554985046
+            }
+        }
+    },
+
+    "inception_v3_make_classifier3": {
+
+        "description": [
+            "start with pretrained weights",
+            "trainable inception v3 layer",
+            "dropout 0.2",
+            "1000 hidden neurons no regularization",
+            "dense layer with regularization", 
+            "trained on pre-splitted dataset"
+        ],
+
+        "training": {
+
+            "inception_v3_make_classifier3_20201101171629": {
+                "optimizer": "Adam",
+                "batch_size": 100,
+                "saved_epoch": 37,
+                "loss": 0.608264148235321,
+                "accuracy": 0.8865324854850769
+            },
+            "inception_v3_make_classifier3_20201101211744": {
+                "optimizer": "Adam",
+                "batch_size": 100,
+                "saved_epoch": 41,
+                "loss": 0.5108298063278198,
+                "accuracy": 0.9019337892532349
+            },
+            "inception_v3_make_classifier3_20201102011922": {
+                "optimizer": "Adam",
+                "batch_size": 100,
+                "saved_epoch": 32,
+                "loss": 0.38316038250923157,
+                "accuracy": 0.9221079349517822
+            },
+            "inception_v3_make_classifier3_20201102052210": {
+                "optimizer": "Adam",
+                "batch_size": 100,
+                "saved_epoch": 34,
+                "loss": 0.3490629196166992,
+                "accuracy": 0.9242730140686035
+            },
+            "inception_v3_make_classifier3_20201102213018": {
+                "optimizer": "Adam",
+                "batch_size": 100,
+                "saved_epoch": 40,
+                "loss": 0.29848259687423706,
+                "accuracy": 0.9326624870300293
+            }
+        }
+
+    },
+
+    "inception_v3_make_classifier4": {
+
+        "description": [
+            "start with pretrained weights",
+            "trainable inception v3 layer",
+            "dropout 0.2",
+            "2x 1000 hidden neurons no regularization",
+            "dense layer with regularization", 
+            "trained on pre-splitted dataset"
+        ],
+
+        "training": {
+
+            "inception_v3_make_classifier4_20201103012942": {
+                "optimizer": "Adam",
+                "batch_size": 100,
+                "saved_epoch": 38,
+                "loss": 0.8520709872245789,
+                "accuracy": 0.8434778451919556
+            },
+            "inception_v3_make_classifier4_20201103053449": {
+                "optimizer": "Adam",
+                "batch_size": 100,
+                "saved_epoch": 24,
+                "loss": 0.7188154458999634,
+                "accuracy": 0.8721399307250977
+            },
+            "inception_v3_make_classifier4_20201103103831": {
+                "optimizer": "Adam",
+                "batch_size": 100,
+                "saved_epoch": 39,
+                "loss": 0.5070152878761292,
+                "accuracy": 0.9167937636375427
+            },
+            "inception_v3_make_classifier4_20201103144208": {
+                "optimizer": "Adam",
+                "batch_size": 100,
+                "saved_epoch": 35,
+                "loss": 0.4864453673362732,
+                "accuracy": 0.919278621673584
+            }
+        }
+    }
+
+}
