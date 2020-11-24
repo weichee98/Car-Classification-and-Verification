@@ -59,7 +59,6 @@ Car-Classification-and-Verification
 |       └── 2
 |       └── ...
 |   └── label
-│   └── image
 |       └── 1
 |           └── 1101
 |               └── 2011
@@ -95,6 +94,7 @@ Car-Classification-and-Verification
 │   └── test.csv
 │   └── train.csv
 |   └── valid.csv
+├── log
 ├── model
 │   └── ...
 │   └── googlenet
@@ -138,7 +138,6 @@ Car-Classification-and-Verification
 | Directory                                                                                 | Description                                                                                                                                                                                                     |
 |-------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [data](https://github.com/weichee98/Car-Classification-and-Verification/tree/main/data)   | The directory contains the images for training and testing, and the required csv files. After downloading the dataset, make sure to copy the dataset to this folder following the required directory structure. |
-| [image](https://github.com/weichee98/Car-Classification-and-Verification/tree/main/image) | The directory contains the analysis result images including graphs and plots.                                                                                                                                   |
 | [log](https://github.com/weichee98/Car-Classification-and-Verification/tree/main/log)     | The directory contains the training and testing logs.                                                                                                                                                           |
 | [model](https://github.com/weichee98/Car-Classification-and-Verification/tree/main/model) | The directory contains saved models and a python file model_manager.py, which an be used to save and load models.                                                                                               |
 | [src](https://github.com/weichee98/Car-Classification-and-Verification/tree/main/src)     | The directory contains 5 python files, which are important for training and testing purposes.                                                                                                                   |
